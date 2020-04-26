@@ -11,7 +11,7 @@ node('master')
     stage('ContinuousDeployment-Loans') 
    {
        sh label: '', script: '''
-scp /home/ubuntu/.jenkins/workspace/MultiBranchPipeline_Loans/webapp/target/webapp.war ubuntu@172.31.6.65:/var/lib/tomcat8/webapps/testapp.war'''
+scp /home/ubuntu/.jenkins/workspace/MultiBranchPipeline_Loans/webapp/target/webapp.war ubuntu@172.31.9.247:/var/lib/tomcat8/webapps/testapp.war'''
    }
    stage('ContinuousTesting-Loans')
    {
