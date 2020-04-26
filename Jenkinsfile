@@ -4,7 +4,7 @@ node('master')
    {
        git 'https://github.com/intelliqittrainings/maven.git'
    }
-   stage('ContinuousBuild-Master') 
+   stage('ContinuousBuild-Master1') 
    {
        sh label: '', script: 'mvn package'
    }
