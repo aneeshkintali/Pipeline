@@ -4,16 +4,16 @@ node('master')
    {
        git 'https://github.com/intelliqittrainings/maven.git'
    }
-   stage('ContinuousBuild-Loans') 
+   stage('ContinuousBuild-Loans1') 
    {
        sh label: '', script: 'mvn package'
    }
-    stage('ContinuousDeployment-Loans') 
+    stage('ContinuousDeployment-Loans1') 
    {
        sh label: '', script: '''
 scp /home/ubuntu/.jenkins/workspace/MultiBranchPipeline_Loans/webapp/target/webapp.war ubuntu@172.31.9.247:/var/lib/tomcat8/webapps/testapp.war'''
    }
-   stage('ContinuousTesting-Loans')
+   stage('ContinuousTesting-Loans1')
    {
        git 'https://github.com/intelliqittrainings/FunctionalTesting.git'
    
